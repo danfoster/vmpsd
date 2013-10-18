@@ -1,0 +1,90 @@
+vmpsd (1.4.04-2) unstable; urgency=low
+
+  * Added logrotate snippet for /var/log/vmps.log
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Mon, 23 Jul 2012 08:50:16 +0100
+
+vmpsd (1.4.04-1) unstable; urgency=low
+
+  * no-return-in-nonvoid-function patches (Walery Wysotsky)
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.4.03-1) unstable; urgency=low
+
+  * close stdin/out/err for daemon (reported by Arnaud Gomes-do-Vale)
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.4.02-1) unstable; urgency=low
+
+  * bug in find_port fixed (ds)
+  * small fix for x86_64 (ds)
+  * bug in external.c vlan name 'none' comparison
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.4.01-1) unstable; urgency=low
+
+  * added some missing header files (ds)
+  * added some missing files (ds)
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.4-1) unstable; urgency=low
+
+  * -c option, if port is already connected to different vlan then deny it, default is to allow
+  * string format vulnerability fixed (http://www.securityfocus.com/bid/15072/info) by Manuel Bouyer < bouyer netbsd org >
+  * FreeBSD compile fix in daemon.c by Yuri Meshalkin
+  * -e option fixes (ds)
+  * more readable logging messages by Marc Baudoin ( babafou _at_ pasteur.fr )
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.3-1) unstable; urgency=low
+
+  * option -e, use of external program for mac -> vlan mapping (Dori Seliskar)
+  * change of default logging level to more sensible SYSTEM|PARSER|VQP|INFO  and some new log messages (Alex Dawson < alex _at_ ee.uwa.edu.au >)
+  * finally applied "SIGHUP fix for Solaris" patch from Steven Kehlet
+  * start/stop script from Phil A. Hedrick <phil _dot_ hedrick _at_ capgemini _dot_ com> in contrib directory
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.2-1) unstable; urgency=low
+
+  * netreg extension + bugfixes by David Parsley <parsley _at_ linuxjedi.org>
+  * man page by Alex Kirk <alex _at_ schnarff.com>
+  * test client tool by Alex Dawson ( alex _at_ ee.uwa.edu.au )
+  * vmps-port-policies should work now properly, network byte order cleanup (Dori Seliskar) 
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.1-1) unstable; urgency=low
+
+  * make it compile & run under OpenBSD
+  * on SIGHUP now rereads its database, contributed by Alex Dawson ( alex _at_ ee.uwa.edu.au )
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+
+vmpsd (1.0-1) unstable; urgency=low
+
+  * bump version number, so people will stop asking me if this
+  is any good with such low version number ;), after all 1.0 is well
+  deserved, we run it for more than two years now (aug 2003) and
+  till now the network has grown to ~40 switches and ~700 hosts
+  (actually ~800, but some 120 clients are still in todo list for
+   dynamic vlans)
+
+  * compilation on Solaris should work now,
+  tested with gcc, gmake, Solaris 9
+
+  * should run properly on non i386 arch now, tested on SPARC
+
+  * fixed wrong log level command line option handling ( -l )
+
+  * fixed wrong parameter handling for bind address ( -a ) 
+
+  *- fixed fallback vlan bug
+
+ -- Dan Foster <dan.foster@bristol.ac.uk>  Thu, 26 Apr 2012 10:58:11 +0100
+

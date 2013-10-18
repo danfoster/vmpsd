@@ -1,0 +1,17 @@
+Source: vmpsd
+Section: unknown
+Priority: extra
+Maintainer: Dan Foster <dan.foster@bristol.ac.uk>
+Build-Depends: debhelper (>= 7.0.50~), autotools-dev
+Standards-Version: 3.8.4
+Homepage: http://http://vmps.sourceforge.net/
+#Vcs-Git: git://git.debian.org/collab-maint/vmpsd.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/vmpsd.git;a=summary
+
+Package: vmpsd
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Open Source Sisco VMPS Server
+ VMPS (VLAN Management Policy Server) is a way of assigning switch ports to
+ specific VLANs based on MAC address of connecting device. OpenVMPS is a GPL
+ implementation of VMPS. More about VMPS you can read on www.cisco.com.

@@ -1,0 +1,8 @@
+/var/log/vmps.log {
+        weekly
+        missingok
+        rotate 4
+        compress
+        copytruncate
+        notifempty
+}
